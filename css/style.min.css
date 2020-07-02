@@ -1,0 +1,394 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+.container {
+  display: grid;
+  grid-template-rows: 100vh min-content min-content min-content min-content min-content;
+}
+body {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.image {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/hero_image.svg);
+  background-size: cover;
+}
+.image .navbar {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.image .navbar__logo {
+  margin-left: 10rem;
+}
+.image .navbar__logo:hover {
+  cursor: pointer;
+}
+.image .navbar__links {
+  width: 30%;
+}
+.image .navbar__links .links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.7rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+.image .navbar__links .links li {
+  list-style: none;
+}
+.image .navbar__links .links li .active {
+  color: #fc7e2f;
+}
+.image .navbar__links .links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+}
+.image .text__content {
+  display: inline-block;
+  position: absolute;
+  top: 38%;
+  left: 35%;
+  color: #fff;
+}
+.image .text__content--paragraph {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 0 auto;
+}
+.image .text__content--paragraph p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  display: flex;
+  width: 53%;
+  line-height: 2.4rem;
+  text-align: center;
+  justify-content: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+.image .text__content--paragraph .button {
+  margin-top: 2.5rem;
+  background-color: #fc7e2f;
+  border: none;
+  padding: 1.3rem 3rem;
+  border-radius: 1rem;
+  color: #fff;
+  outline: 0;
+  font-weight: 700;
+  font-size: 1.7rem;
+  transition: all ease 0.3s;
+}
+.image .text__content--paragraph .button:hover {
+  cursor: pointer;
+  background-color: #e7803f;
+}
+.image .text__content h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 500;
+}
+.best__destinations {
+  background-color: #9acd32;
+}
+.best__destinations--above {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.best__destinations--above .card {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  width: 19%;
+  box-shadow: 10px 10px 40px rgba(196, 196, 196, 0.25);
+  margin-top: -12rem;
+  background-color: #fff;
+  padding: 2rem 3rem;
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 3rem;
+  transition: all ease 0.4s;
+}
+.best__destinations--above .card:hover {
+  background-color: #fc7e2f;
+}
+.best__destinations--above .card:hover > * {
+  color: #fff;
+}
+.best__destinations--above .card i {
+  color: #fc7e2f;
+  font-size: 3rem;
+}
+.best__destinations--above .card__heading--1 {
+  font-size: 3.6rem;
+}
+.best__destinations--above .card__heading--3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.best__destinations--above .card__paragraph {
+  font-size: 1.7rem;
+  grid-column: 1/2;
+  margin-bottom: 3.5rem;
+  width: 95%;
+}
+.best__destinations--above .card:not(:last-child) {
+  margin-right: 3.7rem;
+}
+.gallery__section {
+  overflow: hidden;
+  margin-top: 6rem;
+}
+.gallery__section--header {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #333;
+  font-weight: 700;
+  margin-left: 37rem;
+}
+.gallery__section .cards {
+  display: flex;
+  margin-top: 4.5rem;
+  overflow-x: hidden;
+  width: 100%;
+  padding-left: 15rem;
+  height: 40vh;
+}
+.gallery__section .image__card {
+  background-size: cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  position: relative;
+  margin-right: 3.5rem;
+}
+.gallery__section .image__card--span {
+  position: absolute;
+  background-color: #fc7e2f;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 15px 0 15px 0;
+  top: 0;
+  left: 0;
+}
+.gallery__section .image__card--location {
+  position: absolute;
+  top: 82%;
+  left: 5%;
+  color: #fff;
+  font-size: 2rem;
+}
+.gallery__section .image__card .heading--3 {
+  font-size: 2.2rem;
+  color: #fff;
+  position: absolute;
+  top: 70%;
+  left: 5%;
+}
+.gallery__section .card-1 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/big-ben.svg);
+}
+.gallery__section .card-2 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/machu-pichu.svg);
+}
+.gallery__section .card-3 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/kuta-beach.svg);
+}
+.gallery__section .card-4 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/disneyland.svg);
+}
+.gallery__section .card-5 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/tokyo-tower.svg);
+}
+.gallery__section .card-6 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/bromo.svg);
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  margin: 8rem 0;
+  align-items: center;
+}
+.gallery__parag {
+  margin-right: 20rem;
+}
+.gallery__parag h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #333;
+  font-weight: 700;
+}
+.gallery__parag p {
+  font-size: 1.8rem;
+  color: #333;
+  max-width: 23rem;
+  font-family: "Playfair Display", serif;
+}
+.gallery__below {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.gallery__below--paragraph {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.gallery__below--paragraph h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #333;
+  font-weight: 700;
+}
+.gallery__below--paragraph p {
+  font-size: 1.8rem;
+  color: #333;
+  font-family: "Playfair Display", serif;
+  max-width: 23rem;
+  margin: 0 auto;
+}
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+.testimonials__paragraph {
+  margin-top: 5rem;
+  margin-left: 36rem;
+  margin-bottom: 5rem;
+}
+.testimonials__paragraph h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #333;
+  font-weight: 700;
+}
+.testimonials__paragraph p {
+  font-size: 1.8rem;
+  color: #333;
+  font-family: "Playfair Display", serif;
+}
+.testimonials__image {
+  display: flex;
+  margin: 5rem 35rem 12rem 40rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.testimonials__image--person__image {
+  max-width: 300px;
+  height: 400px;
+  position: relative;
+}
+.testimonials__image--person__image img {
+  border-radius: 50px 50px 50px 0;
+  z-index: 2;
+  position: relative;
+}
+.testimonials__image--person__image::before {
+  content: "";
+  border: 3px solid #fc7e2f;
+  position: absolute;
+  top: 8%;
+  left: -8%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px 50px 50px 0;
+  z-index: 1;
+}
+.testimonials__image--paragraph {
+  margin: 0 auto;
+}
+.testimonials__image--paragraph .comments {
+  margin: 0 auto;
+  width: 32vw;
+}
+.testimonials__image--paragraph .comments p {
+  max-width: 46rem;
+  line-height: 3rem;
+  margin: 0 auto;
+  font-family: "Playfair Display", serif;
+  color: #333;
+  font-size: 2.2rem;
+}
+.testimonials__image--paragraph .comments .quote--up i {
+  margin-bottom: 3rem;
+  font-size: 4.5rem;
+}
+.testimonials__image--paragraph .comments .quote--down {
+  display: flex;
+  justify-content: flex-end;
+}
+.testimonials__image--paragraph .comments .quote--down i {
+  font-size: 4.5rem;
+  margin-top: 3rem;
+}
+.testimonials__image--person {
+  margin-top: 5rem;
+}
+.testimonials__image--person h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333;
+}
+.testimonials__image--person span {
+  font-size: 1.8rem;
+  color: #fc7e2f;
+}
+.footer {
+  background-color: #051334;
+  color: #fff;
+  padding: 10rem 37rem 20rem;
+}
+.footer h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+  font-weight: 400;
+}
+.footer p {
+  font-size: 1.6rem;
+  max-width: 20rem;
+  margin-top: 2rem;
+}
+.footer__container {
+  padding-right: 10rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  font-family: "Nunito Sans", sans-serif;
+}
+.footer__container li {
+  list-style: none;
+}
+.footer__container li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.footer__container a {
+  color: #fff;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+.footer__container a:hover {
+  text-decoration: underline;
+}

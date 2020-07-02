@@ -1,0 +1,485 @@
+$font-display: "Playfair Display", sans-serif;
+$font-links: "Nunito Sans", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh min-content min-content min-content min-content min-content;
+}
+
+body {
+  font-family: $font-display;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.image {
+  background-image: linear-gradient(to right, rgba(rgb(0, 0, 0), 0.5), rgba(rgb(0, 0, 0), 0.5)),
+    url(../img/hero_image.png);
+  background-size: cover;
+
+  .navbar {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    justify-content: space-around;
+    align-items: center;
+
+    &__logo {
+      margin-left: 10rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__links {
+      width: 30%;
+
+      .links {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.7rem;
+        font-family: $font-links;
+        li {
+          list-style: none;
+
+          .active {
+            color: rgb(252, 126, 47);
+          }
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .text__content {
+    display: inline-block;
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    color: #fff;
+
+    &--paragraph {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      margin: 0 auto;
+
+      p {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-top: 1rem;
+        display: flex;
+        width: 53%;
+        line-height: 2.4rem;
+        text-align: center;
+        justify-content: center;
+        font-family: $font-links;
+      }
+      .button {
+        margin-top: 2.5rem;
+        background-color: rgb(252, 126, 47);
+        border: none;
+        padding: 1.3rem 3rem;
+        border-radius: 1rem;
+        color: #fff;
+        outline: none;
+        font-weight: bold;
+        font-size: 1.7rem;
+        transition: all ease 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(231, 128, 63);
+        }
+      }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.best__destinations {
+  background-color: yellowgreen;
+
+  &--above {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+
+    .card {
+      display: grid;
+      grid-template-columns: 1fr min-content;
+      align-items: center;
+
+      width: 19%;
+      box-shadow: 10px 10px 40px rgba(196, 196, 196, 0.25);
+      margin-top: -12rem;
+      background-color: white;
+      padding: 2rem 3rem;
+      font-family: $font-links;
+      border-radius: 3rem;
+      transition: all ease 0.4s;
+
+      &:hover {
+        background-color: rgb(252, 126, 47);
+      }
+
+      &:hover > * {
+        color: #fff;
+      }
+
+      i {
+        color: rgb(252, 126, 47);
+        font-size: 3rem;
+      }
+
+      &__heading--1 {
+        font-size: 3.6rem;
+      }
+
+      &__heading--3 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+      }
+
+      &__paragraph {
+        font-size: 1.7rem;
+        grid-column: 1 / 2;
+        margin-bottom: 3.5rem;
+        width: 95%;
+      }
+
+      &:not(:last-child) {
+        margin-right: 3.7rem;
+      }
+    }
+  }
+}
+
+.gallery__section {
+  // display: grid;
+  // background-color: red;
+  overflow: hidden;
+  margin-top: 6rem;
+
+  &--header {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    margin-left: 37rem;
+  }
+
+  .cards {
+    display: flex;
+    // background-color: blue;
+    margin-top: 4.5rem;
+    overflow-x: hidden;
+    width: 100%;
+    padding-left: 15rem;
+    height: 40vh;
+  }
+
+  .image__card {
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    border-radius: 1.5rem;
+    position: relative;
+    margin-right: 3.5rem;
+
+    &--span {
+      position: absolute;
+      background-color: rgb(252, 126, 47);
+      color: #fff;
+      padding: 0.7rem 2rem;
+      font-size: 1.6rem;
+      border-radius: 15px 0px 15px 0px;
+      top: 0%;
+      left: 0%;
+    }
+
+    &--location {
+      position: absolute;
+      top: 82%;
+      left: 5%;
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .heading--3 {
+      font-size: 2.2rem;
+      color: #fff;
+      position: absolute;
+      top: 70%;
+      left: 5%;
+    }
+  }
+
+  .card-1 {
+    background-image: linear-gradient(to right, rgba(rgb(0, 0, 0), 0.5), rgba(rgb(0, 0, 0), 0.5)),
+      url(../img/big-ben.jpg);
+  }
+
+  .card-2 {
+    background-image: linear-gradient(to right, rgba(rgb(0, 0, 0), 0.5), rgba(rgb(0, 0, 0), 0.5)),
+      url(../img/machu-pichu.jpg);
+  }
+
+  .card-3 {
+    background-image: linear-gradient(to right, rgba(rgb(0, 0, 0), 0.5), rgba(rgb(0, 0, 0), 0.5)),
+      url(../img/kuta-beach.jpg);
+  }
+
+  .card-4 {
+    background-image: linear-gradient(to right, rgba(rgb(0, 0, 0), 0.5), rgba(rgb(0, 0, 0), 0.5)),
+      url(../img/disneyland.jpg);
+  }
+
+  .card-5 {
+    background-image: linear-gradient(to right, rgba(rgb(0, 0, 0), 0.5), rgba(rgb(0, 0, 0), 0.5)),
+      url(../img/tokyo-tower.jpg);
+  }
+
+  .card-6 {
+    background-image: linear-gradient(to right, rgba(rgb(0, 0, 0), 0.5), rgba(rgb(0, 0, 0), 0.5)),
+      url(../img/bromo.jpg);
+  }
+}
+
+.gallery {
+  // background-color: rgb(169, 147, 233);
+  display: flex;
+  justify-content: center;
+  margin: 8rem 0;
+  align-items: center;
+
+  &__parag {
+    margin-right: 20rem;
+
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      color: rgb(51, 51, 51);
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: rgb(51, 51, 51);
+      max-width: 23rem;
+      font-family: "Playfair Display", serif;
+    }
+  }
+}
+
+.gallery__below {
+  // background-color: red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+
+  &--paragraph {
+    // background-color: wheat;
+    margin-bottom: 5rem;
+    text-align: center;
+
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      color: rgb(51, 51, 51);
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: rgb(51, 51, 51);
+      font-family: "Playfair Display", serif;
+      max-width: 23rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.testimonials {
+  // background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+
+  &__paragraph {
+    margin-top: 5rem;
+    margin-left: 36rem;
+    margin-bottom: 5rem;
+
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      color: rgb(51, 51, 51);
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: rgb(51, 51, 51);
+      font-family: "Playfair Display", serif;
+    }
+  }
+
+  &__image {
+    // background-color: white;
+    display: flex;
+    margin: 5rem 35rem 12rem 40rem;
+    align-items: center;
+    justify-content: space-between;
+
+    &--person__image {
+      // background-color: blue;
+      max-width: 300px;
+      height: 400px;
+      position: relative;
+
+      img {
+        border-radius: 50px 50px 50px 0;
+        z-index: 2;
+        position: relative;
+      }
+
+      &::before {
+        content: "";
+        border: 3px solid rgb(252, 126, 47);
+        position: absolute;
+        top: 8%;
+        left: -8%;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px 50px 50px 0;
+        z-index: 1;
+      }
+    }
+
+    &--paragraph {
+      // background-color: blue;
+      margin: 0 auto;
+
+      .comments {
+        // background-color: red;
+        margin: 0 auto;
+        width: 32vw;
+
+        p {
+          max-width: 46rem;
+          line-height: 3rem;
+          margin: 0 auto;
+          font-family: "Playfair Display", serif;
+          color: rgb(51, 51, 51);
+          font-size: 2.2rem;
+        }
+
+        .quote--up {
+          i {
+            margin-bottom: 3rem;
+            font-size: 4.5rem;
+          }
+        }
+
+        .quote--down {
+          display: flex;
+          justify-content: flex-end;
+
+          i {
+            font-size: 4.5rem;
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+
+    &--person {
+      // background-color: whitesmoke;
+      margin-top: 5rem;
+
+      h4 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: rgb(51, 51, 51);
+      }
+
+      span {
+        font-size: 1.8rem;
+        color: rgb(252, 126, 47);
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: rgb(5, 19, 52);
+  color: #fff;
+  padding: 10rem 37rem 20rem;
+
+  h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 1.6rem;
+    max-width: 20rem;
+    margin-top: 2rem;
+  }
+
+  &__container {
+    // background-color: orangered;
+    padding-right: 10rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    font-family: "Nunito Sans", sans-serif;
+
+    li {
+      list-style: none;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    a {
+      color: #fff;
+      font-size: 1.7rem;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
